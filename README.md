@@ -38,7 +38,7 @@ The project is organized into three main files:
 
 - **index.html**: HTML file containing the structure of the web page.
 - **styles.css**: CSS file containing the styles for the web page.
-- **script.js**: JavaScript file containing the logic for fetching and displaying user and repository data.
+- **scripts.js**: JavaScript file containing the logic for fetching and displaying user and repository data.
 
 ## Dependencies
 
