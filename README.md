@@ -46,4 +46,4 @@ The project is organized into three main files:
 - jQuery (v3.2.1): JavaScript library for DOM manipulation.
 
 
-Feel free to customize the README to better suit your project and provide more detailed information if needed.
+
