@@ -1,5 +1,5 @@
 
-      const githubToken = "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";
+      const githubToken = "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";
 
       async function fetchUserData(page) {
         const username = document.getElementById("username").value;
