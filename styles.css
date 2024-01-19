@@ -2,7 +2,7 @@ body {
     font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Darker background color for the body */
+    background-color: #1a1a1a; 
   }
 
   .container {
@@ -123,7 +123,7 @@ body {
     border: 1px solid #0366d6;
   }
 
-  /* Additional style for input field */
+
   #reposPerPage {
     width: 70px;
   }
@@ -205,11 +205,11 @@ body {
   }
 
   .pagination .page-link:first-child {
-    margin-right: 10px; /* Adjust the spacing between buttons */
+    margin-right: 10px; 
   }
 
   .pagination .page-link:last-child {
-    margin-left: 10px; /* Adjust the spacing between buttons */
+    margin-left: 10px; 
   }
   footer {
     position: relative;
