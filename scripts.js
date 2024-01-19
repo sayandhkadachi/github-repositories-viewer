@@ -36,57 +36,48 @@
           const userLocation = document.createElement("p");
           userLocation.textContent = `Location: ${userData.location || "N/A"}`;
 
-          // ... (your existing code)
-
-          // Create a container for links (GitHub and Twitter)
+         
           const linksContainer = document.createElement("div");
           linksContainer.classList.add("links-container");
 
-          // Create a container for GitHub link
+          
           const githubLinkContainer = document.createElement("div");
           githubLinkContainer.classList.add("link-container");
 
-          // Create a container for Twitter link
+      
           const twitterLinkContainer = document.createElement("div");
           twitterLinkContainer.classList.add("link-container");
 
-          // Create GitHub link element
           const githubLink = document.createElement("a");
           githubLink.href = userData.html_url;
           githubLink.textContent = "GitHub";
           githubLink.classList.add("github-link");
           githubLinkContainer.appendChild(githubLink);
-          // Create Twitter link element
-          // ... (your existing code)
+          
 
           const twitterHandle = userData.twitter_username
             ? userData.twitter_username
             : null;
 
-          // Check if Twitter handle is present
+          
           if (twitterHandle) {
-            // Create a container for Twitter link
+          
             const twitterLinkContainer = document.createElement("div");
             twitterLinkContainer.classList.add("link-container");
 
-            // Create Twitter link element
             const twitterLink = document.createElement("a");
             twitterLink.href = `https://twitter.com/${twitterHandle}`;
             twitterLink.textContent = `@${twitterHandle}`;
             twitterLink.classList.add("link");
             twitterLinkContainer.appendChild(twitterLink);
 
-            // Append the Twitter link container to the main links container
             linksContainer.appendChild(twitterLinkContainer);
           }
 
-          // ... (rest of your existing code)
-
-          // Append link containers to the main links container
+       
           linksContainer.appendChild(githubLinkContainer);
           linksContainer.appendChild(twitterLinkContainer);
 
-          // Append the links container to the user details container
           userDetailsContainer.appendChild(userAvatar);
           userDetailsContainer.appendChild(userName);
           userDetailsContainer.appendChild(userBio);
@@ -94,7 +85,7 @@
           userDetailsContainer.appendChild(document.createElement("br"));
           userDetailsContainer.appendChild(linksContainer);
 
-          // ... (rest of your existing code)
+      
 
           const repositoriesResponse = await fetch(
             `https://api.github.com/users/${username}/repos?per_page=${reposPerPage}&page=${page}`,
@@ -118,15 +109,15 @@
               repoDescription.textContent =
                 repo.description || "No description available.";
 
-              // Create a container for topics
+            
               const topicsContainer = document.createElement("div");
               topicsContainer.classList.add("topics-container");
 
-              // Create a label for topics
+            
               const topicsLabel = document.createElement("strong");
               topicsLabel.textContent = "Topics: ";
 
-              // Create a container for individual topics
+           
               const topicsListContainer = document.createElement("div");
               topicsListContainer.classList.add("topics-list-container");
 
@@ -134,14 +125,14 @@
                 `https://api.github.com/repos/${username}/${repo.name}/topics`,
                 {
                   headers: {
-                    Accept: "application/vnd.github.mercy-preview+json", // Required header for topics API
+                    Accept: "application/vnd.github.mercy-preview+json", 
                   },
                 }
               );
 
               const topicsData = await topicsResponse.json();
 
-              // Create and append individual topic elements
+             
               topicsData.names.forEach((topic) => {
                 const topicElement = document.createElement("span");
                 topicElement.classList.add("topic");
@@ -149,16 +140,16 @@
                 topicsListContainer.appendChild(topicElement);
               });
 
-              // Append label and topics list container to the main topics container
+             
               topicsContainer.appendChild(topicsLabel);
               topicsContainer.appendChild(topicsListContainer);
 
-              // Append the topics container to the repository container
+            
               repoContainer.appendChild(repoName);
               repoContainer.appendChild(repoDescription);
               repoContainer.appendChild(topicsContainer);
 
-              // ... (rest of your existing code)
+           
 
               repositoriesContainer.appendChild(repoContainer);
             }
